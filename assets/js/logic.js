@@ -1,12 +1,18 @@
 // Function to handle user's answer
+// Set 2 audio objects for the right or wrong answers wav files
+const correctSound = new Audio("./assets/sfx/correct.wav");
+const incorrectSound = new Audio("./assets/sfx/incorrect.wav");
+
 function handleAnswer(selectedChoice) {
   const currentQuestion = questions[currentQuestionIndex];
   const feedbackContainer = document.getElementById("feedback");
 
   if (selectedChoice === currentQuestion.correctAnswer) {
     feedbackContainer.textContent = "Correct!";
+    correctSound.play();
   } else {
     feedbackContainer.textContent = "Wrong!";
+    incorrectSound.play();
     timeRemaining -= 10;
     if (timeRemaining < 0) {
       timeRemaining = 0;
