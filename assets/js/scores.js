@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch high scores from local storage
   const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-  // Populate the high scores
+  // Populate the high scores list
   highScores.forEach((score, index) => {
     const listItem = document.createElement("li");
     listItem.textContent = `${score.initials} - ${score.score}`;
