@@ -7,10 +7,12 @@ function handleAnswer(selectedChoice) {
   const currentQuestion = questions[currentQuestionIndex];
   const feedbackContainer = document.getElementById("feedback");
 
+  // Check if the selected choice is correct
   if (selectedChoice === currentQuestion.correctAnswer) {
     feedbackContainer.textContent = "Correct!";
     correctSound.play();
   } else {
+    // If incorrect, update feedback, play incorrect sound, reduce time, and update display
     feedbackContainer.textContent = "Wrong!";
     incorrectSound.play();
     timeRemaining -= 10;
@@ -19,8 +21,9 @@ function handleAnswer(selectedChoice) {
     }
     displayTime();
   }
-
+  // Add the selected choice to the user's answers
   userAnswers.push(selectedChoice);
+  // Remove the hide class from the feedback container to make it visible
   feedbackContainer.classList.remove("hide");
 
   setTimeout(() => {
@@ -34,7 +37,6 @@ function handleAnswer(selectedChoice) {
     }
   }, 1000);
 }
-
 // Function to calculate the score based on correct answers
 function calculateScore() {
   let correctAnswers = 0;
