@@ -16,6 +16,8 @@ This JavaScript Timed Quiz Application offers several key features:
 ## Usage
 When you open the application, you'll see a start button. Clicking this button will begin the quiz. The quiz consists of multiple-choice questions. Select an answer by clicking on the corresponding button. Once. The quiz ends when all questions have been answered or the timer reaches zero. At the end of the quiz, your score is displayed. You can enter your initials and submit your score to the leaderboard.
 
+You can visit the website by clicking on this [LINK](https://cntervisi.github.io/Coding-Quiz/).
+
 Here is a screenshot of the Coding-Quiz application:
 
 ![alt"screenshot"](./assets/images/coding-quiz-screenshot.png)
